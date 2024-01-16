@@ -6,12 +6,14 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
-public class devCardTest {
+public class DevCardTest {
     private String genDate(int newDays, String patern) {
         return LocalDate.now().plusDays(newDays).format(DateTimeFormatter.ofPattern(patern));
     }
+
     @Test
     void cardDevTest() {
 
